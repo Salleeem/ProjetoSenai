@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ProjetosenaiApplication<projetosenai>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "webapp.projetosenai.ProjetosenaiApplication",
+            "projectName": "projetosenai",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
