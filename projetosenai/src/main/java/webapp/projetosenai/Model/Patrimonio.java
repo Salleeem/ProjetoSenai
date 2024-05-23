@@ -14,7 +14,7 @@ public class Patrimonio {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_patri;
+    private int id_patri;
     private int id_bloco;
     private int id_sala;
     private String nome_func;
@@ -24,11 +24,11 @@ public class Patrimonio {
     private LocalDate data_aqc;
 
     // Getters and Setters
-    public Long getId_patri() {
+    public int getId_patri() {
         return id_patri;
     }
 
-    public void setId_patri(Long id_patri) {
+    public void setId_patri(int id_patri) {
         this.id_patri = id_patri;
     }
 
