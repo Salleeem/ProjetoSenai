@@ -1,0 +1,34 @@
+/* Estilos para o cabeçalho */
+.site-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .site-header__title {
+    font-size: 24px;
+  }
+  
+  /* Estilos para o conteúdo principal */
+  .main-content {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .main-content__checkmark {
+    font-size: 48px; /* Aumenta o tamanho do ícone de check */
+    color: #28a745; /* Cor verde */
+  }
+  
+  .main-content__body {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .main-content__body:hover {
+    color: #0056b3; /* Cor azul mais escura ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+  }
+  
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
