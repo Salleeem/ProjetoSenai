@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import webapp.projetosenai.Model.Funcionario;
 import webapp.projetosenai.Repository.FuncionarioRepository;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class HomeController {
@@ -36,6 +38,12 @@ public class HomeController {
     public String sucessoca() {
         return "sucessoca";
     }
+
+    @GetMapping("/sucessocapa")
+    public String sucessocapa() {
+        return "sucessocapa";
+    }
+    
 
     @PostMapping("/cadastrarFuncionario")
     public ModelAndView cadastrarFuncionario(@ModelAttribute Funcionario funcionario) {

@@ -28,6 +28,6 @@ public class PatrimonioController {
             return "cadastropatri";
         }
         patrimonioRepository.save(patrimonio);
-        return "redirect:/sucessoca";
+        return "redirect:/sucessocapa";
     }
 }
