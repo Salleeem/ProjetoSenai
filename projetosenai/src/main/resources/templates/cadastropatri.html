@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Patrimônio</title>
+</head>
+<body>
+    <h2>Cadastro de Patrimônio</h2>
+    <form action="/cadastrarPatrimonio" method="post">
+        <label for="idBloco">ID do Bloco:</label>
+        <input type="text" id="idBloco" name="idBloco" required><br><br>
+        
+        <label for="idSala">ID da Sala:</label>
+        <input type="text" id="idSala" name="idSala" required><br><br>
+        
+        <label for="nome">Nome do Funcionário:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+        
+        <label for="idCat">ID da Categoria:</label>
+        <input type="text" id="idCat" name="idCat" required><br><br>
+        
+        <label for="idUni">ID da Unidade:</label>
+        <input type="text" id="idUni" name="idUni" required><br><br>
+        
+        <label for="valorPatri">Valor do Patrimônio:</label>
+        <input type="number" id="valorPatri" name="valorPatri" required><br><br>
+        
+        <label for="dataAqc">Data de Aquisição:</label>
+        <input type="date" id="dataAqc" name="dataAqc" required><br><br>
+        
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>

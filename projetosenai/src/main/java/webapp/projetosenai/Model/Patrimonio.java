@@ -1,90 +1,86 @@
 package webapp.projetosenai.Model;
 
+import java.io.Serializable;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-
-
-import java.time.LocalDate;
-
 @Entity
-public class Patrimonio {
-    
+public class Patrimonio implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_patri;
-    private int id_bloco;
-    private int id_sala;
-    private String nome_func;
-    private int id_cat;
-    private int id_uni;
-    private int valor_patri;
-    private LocalDate data_aqc;
+    private Long idPatri;
+    private String idBloco;
+    private String idSala;
+    private Funcionario nome;
+    private String idCat;
+    private String idUni;
+    private double valorPatri;
+    private String dataAqc;
 
-    // Getters and Setters
-    public int getId_patri() {
-        return id_patri;
+    public Long getIdPatri() {
+        return idPatri;
     }
 
-    public void setId_patri(int id_patri) {
-        this.id_patri = id_patri;
+    public void setIdPatri(Long idPatri) {
+        this.idPatri = idPatri;
     }
 
-    public int getId_bloco() {
-        return id_bloco;
+    public String getIdBloco() {
+        return idBloco;
     }
 
-    public void setId_bloco(int id_bloco) {
-        this.id_bloco = id_bloco;
+    public void setIdBloco(String idBloco) {
+        this.idBloco = idBloco;
     }
 
-    public int getId_sala() {
-        return id_sala;
+    public String getIdSala() {
+        return idSala;
     }
 
-    public void setId_sala(int id_sala) {
-        this.id_sala = id_sala;
+    public void setIdSala(String idSala) {
+        this.idSala = idSala;
     }
 
-    public String getNome_func() {
-        return nome_func;
+    public Funcionario getNome() {
+        return nome;
     }
 
-    public void setNome_func(String nome_func) {
-        this.nome_func = nome_func;
+    public void setNomeFunc(Funcionario nome) {
+        this.nome = nome;
     }
 
-    public int getId_cat() {
-        return id_cat;
+    public String getIdCat() {
+        return idCat;
     }
 
-    public void setId_cat(int id_cat) {
-        this.id_cat = id_cat;
+    public void setIdCat(String idCat) {
+        this.idCat = idCat;
     }
 
-    public int getId_uni() {
-        return id_uni;
+    public String getIdUni() {
+        return idUni;
     }
 
-    public void setId_uni(int id_uni) {
-        this.id_uni = id_uni;
+    public void setIdUni(String idUni) {
+        this.idUni = idUni;
     }
 
-    public int getValor_patri() {
-        return valor_patri;
+    public double getValorPatri() {
+        return valorPatri;
     }
 
-    public void setValor_patri(int valor_patri) {
-        this.valor_patri = valor_patri;
+    public void setValorPatri(double valorPatri) {
+        this.valorPatri = valorPatri;
     }
 
-    public LocalDate getData_aqc() {
-        return data_aqc;
+    public String getDataAqc() {
+        return dataAqc;
     }
 
-    public void setData_aqc(LocalDate data_aqc) {
-        this.data_aqc = data_aqc;
+    public void setDataAqc(String dataAqc) {
+        this.dataAqc = dataAqc;
     }
 }

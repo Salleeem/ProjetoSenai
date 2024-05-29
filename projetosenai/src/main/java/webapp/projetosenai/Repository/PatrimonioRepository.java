@@ -2,6 +2,8 @@ package webapp.projetosenai.Repository;
 
 import webapp.projetosenai.Model.Patrimonio;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface PatrimonioRepository extends JpaRepository<Patrimonio, Long> {
+@Repository
+public interface PatrimonioRepository extends JpaRepository<Patrimonio, String> {
 }

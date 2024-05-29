@@ -3,33 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listagem de Patrimônios</title>
+    <title>Gerenciamento</title>
 </head>
 <body>
-    <h1>Listagem de Patrimônios</h1>
-    
-    <!-- Adicione uma tabela para exibir os patrimônios -->
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Descrição</th>
-                <!-- Adicione mais colunas conforme necessário -->
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Use Thymeleaf para iterar sobre os patrimônios e exibi-los na tabela -->
-            <tr th:each="patrimonio : ${patrimonios}">
-                <td th:text="${patrimonio.id}"></td>
-                <td th:text="${patrimonio.nome}"></td>
-                <td th:text="${patrimonio.descricao}"></td>
-                <!-- Adicione mais colunas conforme necessário -->
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- Adicione um link para direcionar à página de cadastro -->
-    <a href="/cadastro">Cadastrar Novo Patrimônio</a>
+    <h1>Home</h1>
+    <p>Bem-vindo.</p>
+    <p><a href="/cadastro">Ir para a página de cadastro de funcionários</a></p>
+    <p><a href="/cadastropatri">Ir para o cadastro de Patrimônios</a></p>
 </body>
 </html>
