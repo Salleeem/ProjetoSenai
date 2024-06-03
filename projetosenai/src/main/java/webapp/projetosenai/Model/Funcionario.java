@@ -12,11 +12,19 @@ public class Funcionario implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idFunc;
-    private String cpf;
     private String nome;
     private String cargo;
+    private String cpf;
     private String email;
     private String senha;
+
+    public Long getIdFunc() {
+        return idFunc;
+    }
+
+    public void setIdFunc(Long idFunc) {
+        this.idFunc = idFunc;
+    }
 
     public String getCpf() {
         return cpf;

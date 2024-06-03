@@ -1,14 +1,15 @@
 package webapp.projetosenai.Controll;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 import webapp.projetosenai.Model.Funcionario;
 import webapp.projetosenai.Repository.FuncionarioRepository;
-import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
 
 @Controller
 public class HomeController {
@@ -43,6 +44,14 @@ public class HomeController {
     public String sucessocapa() {
         return "sucessocapa";
     }
+
+    @GetMapping("/listarFuncionario")
+    public String listarFuncionario(Model model) {
+        List<Funcionario> funcionarios = funcionarioRepository.findAll();
+        model.addAttribute("funcionarios", funcionarios);
+        return "listarFuncionario";
+    }
+
     
 
     @PostMapping("/cadastrarFuncionario")

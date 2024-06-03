@@ -15,7 +15,7 @@ public class Patrimonio implements Serializable {
     private String idBloco;
     private String idSala;
     private Funcionario nome;
-    private String idCat;
+    private String descri;
     private String idUni;
     private double valorPatri;
     private String dataAqc;
@@ -48,16 +48,16 @@ public class Patrimonio implements Serializable {
         return nome;
     }
 
-    public void setNomeFunc(Funcionario nome) {
+    public void setNome(Funcionario nome) {
         this.nome = nome;
     }
 
-    public String getIdCat() {
-        return idCat;
+    public String getDescri() {
+        return descri;
     }
 
-    public void setIdCat(String idCat) {
-        this.idCat = idCat;
+    public void setDescri(String descri) {
+        this.descri = descri;
     }
 
     public String getIdUni() {
