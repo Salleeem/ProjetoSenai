@@ -1,55 +1,37 @@
 package webapp.projetosenai.Model;
 
 import java.io.Serializable;
-
+import java.sql.Date;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Patrimonio implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idPatri;
-    private String idBloco;
-    private String idSala;
-    private Funcionario nome;
-    private String descri;
-    private String idUni;
-    private double valorPatri;
-    private String dataAqc;
 
+    private String descri;
+    private Double valorPatri;
+    private Date dataAqc;
+    private String status;
+
+    @ManyToOne
+    @JoinColumn(name = "idFunc")
+    private Funcionario func;
+
+    // Getters and Setters
     public Long getIdPatri() {
         return idPatri;
     }
 
     public void setIdPatri(Long idPatri) {
         this.idPatri = idPatri;
-    }
-
-    public String getIdBloco() {
-        return idBloco;
-    }
-
-    public void setIdBloco(String idBloco) {
-        this.idBloco = idBloco;
-    }
-
-    public String getIdSala() {
-        return idSala;
-    }
-
-    public void setIdSala(String idSala) {
-        this.idSala = idSala;
-    }
-
-    public Funcionario getNome() {
-        return nome;
-    }
-
-    public void setNome(Funcionario nome) {
-        this.nome = nome;
     }
 
     public String getDescri() {
@@ -60,27 +42,41 @@ public class Patrimonio implements Serializable {
         this.descri = descri;
     }
 
-    public String getIdUni() {
-        return idUni;
-    }
-
-    public void setIdUni(String idUni) {
-        this.idUni = idUni;
-    }
-
-    public double getValorPatri() {
+    public Double getValorPatri() {
         return valorPatri;
     }
 
-    public void setValorPatri(double valorPatri) {
+    public void setValorPatri(Double valorPatri) {
         this.valorPatri = valorPatri;
     }
 
-    public String getDataAqc() {
+    public Date getDataAqc() {
         return dataAqc;
     }
 
-    public void setDataAqc(String dataAqc) {
+    public void setDataAqc(Date dataAqc) {
         this.dataAqc = dataAqc;
     }
+
+    public Funcionario getFunc() {
+        return func;
+    }
+
+    public void setFunc(Funcionario func) {
+        this.func = func;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    
+    }
+
+    
+
+
+
 }

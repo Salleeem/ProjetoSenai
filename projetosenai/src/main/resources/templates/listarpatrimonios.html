@@ -17,25 +17,17 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Bloco</th>
-                    <th>Sala</th>
-                    <th>Nome do Funcionario</th>
                     <th>Descrição</th>
-                    <th>Unidade</th>
                     <th>Valor</th>
-                    <th>Data de Aquisição</th>
+                    <!-- Adicione outras colunas conforme necessário -->
                 </tr>
             </thead>
             <tbody>
                 <tr th:each="patrimonio : ${patrimonios}">
-                    <td th:text="${patrimonio.idPatri}"></td>
-                    <td th:text="${patrimonio.idBloco}"></td>
-                    <td th:text="${patrimonio.idSala}"></td>
-                    <td th:text="${patrimonio.nome.nome}"></td> <!-- Assuming 'nome' is a Funcionario object -->
-                    <td th:text="${patrimonio.descri}"></td>
-                    <td th:text="${patrimonio.idUni}"></td>
-                    <td th:text="${patrimonio.valorPatri}"></td>
-                    <td th:text="${patrimonio.dataAqc}"></td>
+                    <td th:text="${patrimonio.id}"></td>
+                    <td th:text="${patrimonio.descricao}"></td>
+                    <td th:text="${patrimonio.valor}"></td>
+                    <!-- Adicione outras colunas conforme necessário -->
                 </tr>
             </tbody>
         </table>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Salas</title>
+    <link rel="stylesheet" href="/style/tablestyle.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1 class="site-header__title">Lista de Salas</h1>
+    </header>
+
+    <div class="main-content">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Patrimônio</th>
+                    <th>Funcionário</th>
+                    <th>Bloco</th>
+                    <th>Unidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="sala : ${salas}">
+                    <td th:text="${sala.idSala}"></td>
+                    <td th:if="${sala.patri != null}" th:text="${sala.patri.descricao}"></td>
+                    <td th:if="${sala.patri == null}">Sem patrimônio</td>
+                    <td th:if="${sala.func != null}" th:text="${sala.func.nome}"></td>
+                    <td th:if="${sala.func == null}">Sem funcionário</td>
+                    <td th:text="${sala.bloco}"></td>
+                    <td th:text="${sala.unidade}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

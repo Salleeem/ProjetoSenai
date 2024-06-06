@@ -10,6 +10,8 @@ import webapp.projetosenai.Model.Funcionario;
 import webapp.projetosenai.Repository.FuncionarioRepository;
 
 import java.util.List;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class HomeController {
@@ -44,6 +46,16 @@ public class HomeController {
     public String sucessocapa() {
         return "sucessocapa";
     }
+
+    @GetMapping("/listarpatrimonios")
+    public String listarpatrimonios() {
+        return "listarpatrimonios";
+    }
+
+
+
+    
+    
 
     @GetMapping("/listarFuncionario")
     public String listarFuncionario(Model model) {
