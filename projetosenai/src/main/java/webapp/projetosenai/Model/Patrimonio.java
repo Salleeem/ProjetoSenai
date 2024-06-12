@@ -1,13 +1,8 @@
 package webapp.projetosenai.Model;
 
+import jakarta.persistence.*;
 import java.io.Serializable;
 import java.sql.Date;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Patrimonio implements Serializable {
@@ -26,6 +21,7 @@ public class Patrimonio implements Serializable {
     private Funcionario func;
 
     // Getters and Setters
+
     public Long getIdPatri() {
         return idPatri;
     }
@@ -72,11 +68,5 @@ public class Patrimonio implements Serializable {
 
     public void setStatus(String status) {
         this.status = status;
-    
     }
-
-    
-
-
-
 }

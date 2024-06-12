@@ -52,6 +52,12 @@ public class HomeController {
         return "listarpatrimonios";
     }
 
+    @GetMapping("/cadastropatri")
+    public String cadastropatri() {
+        return  "cadastropatri";
+    }
+    
+
 
 
     
