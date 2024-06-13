@@ -10,7 +10,6 @@ import webapp.projetosenai.Model.Funcionario;
 import webapp.projetosenai.Repository.FuncionarioRepository;
 
 import java.util.List;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
@@ -37,32 +36,6 @@ public class HomeController {
         return "cadastrofunc";
     }
 
-    @GetMapping("/sucessoca")
-    public String sucessoca() {
-        return "sucessoca";
-    }
-
-    @GetMapping("/sucessocapa")
-    public String sucessocapa() {
-        return "sucessocapa";
-    }
-
-    @GetMapping("/listarpatrimonios")
-    public String listarpatrimonios() {
-        return "listarpatrimonios";
-    }
-
-    @GetMapping("/cadastropatri")
-    public String cadastropatri() {
-        return  "cadastropatri";
-    }
-    
-
-
-
-    
-    
-
     @GetMapping("/listarFuncionario")
     public String listarFuncionario(Model model) {
         List<Funcionario> funcionarios = funcionarioRepository.findAll();
@@ -77,4 +50,27 @@ public class HomeController {
         funcionarioRepository.save(funcionario);
         return new ModelAndView("redirect:/sucessoca");
     }
+
+    @GetMapping("/sucessoca")
+    public String sucessoca() {
+        return "sucessoca";
+    }
+
+    @GetMapping("/sucessocapa")
+    public String sucessocapa() {
+        return "sucessocapa";
+    }
+
+    @GetMapping("/listarPatrimonios")
+    public String listarPatrimonios() {
+        return "listarPatrimonios";
+    }
+
+    @GetMapping("/cadastropatri")
+    public String cadastropatri() {
+        return  "cadastropatri";
+    }
+    
+
+    
 }

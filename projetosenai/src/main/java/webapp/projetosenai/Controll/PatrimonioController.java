@@ -2,10 +2,9 @@ package webapp.projetosenai.Controll;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+
 import webapp.projetosenai.Model.Patrimonio;
 import webapp.projetosenai.Repository.FuncionarioRepository;
 import webapp.projetosenai.Repository.PatrimonioRepository;
@@ -18,12 +17,13 @@ public class PatrimonioController {
     private final PatrimonioRepository patrimonioRepository;
     private final FuncionarioRepository funcionarioRepository;
 
-    public PatrimonioController(PatrimonioRepository patrimonioRepository, FuncionarioRepository funcionarioRepository) {
+    public PatrimonioController(PatrimonioRepository patrimonioRepository,
+                                FuncionarioRepository funcionarioRepository) {
         this.patrimonioRepository = patrimonioRepository;
         this.funcionarioRepository = funcionarioRepository;
     }
 
-    @GetMapping("/listarPatrimonios")
+    @GetMapping("/listarpatrimonios")
     public String listarPatrimonios(Model model) {
         List<Patrimonio> patrimonios = patrimonioRepository.findAll();
         model.addAttribute("patrimonios", patrimonios);
